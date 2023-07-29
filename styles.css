@@ -1,9 +1,64 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand' system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+form{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem 2rem;
+}
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar{
+    background-color: #808080;
+    color: #FFFFFF;
+    width: 40vw;
+}
+
+
+.header, .submit_section{
+    background-color: #808080;
+    padding: 0rem 2rem;
+}
+
+.sidebar_overlay{
+    background-color:rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-align: center;
+    padding: 15px 0px;
+    top: 25vh;
+}
+
+.right{
+    width: 60vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    background-color: #808080;
+    color: #FFFFFF;
+}
+
+.input{
+    display: flex;
+    flex-flow: column wrap;
+    font-size: .65rem;
+    justify-content: center;
+    opacity: 50%;
+    background-color: #000000;
+    color:#FFFFFF;
+    padding: 2rem 1rem;
+}
 .sidebar_overlay{
 
 }
