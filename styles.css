@@ -7,10 +7,54 @@
     font-family: 'Quicksand' system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.form_header{
+    margin-top:1.5rem;
+}
+
+.form_section{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.left{
+    padding-left:2rem;
+}
+
 form{
     display: flex;
     flex-flow: row wrap;
-    padding: 2rem 2rem;
+    width: 60vw;
+    gap: 1rem;
+    margin: 1.5rem 0rem;
+}
+
+label{
+    position: relative;
+    margin-bottom: .5rem;
+    user-select: none;
+}
+
+p.submit_section{
+    font-size: .5rem;
+}
+
+p.header{
+    font-size: 1.8rem;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+button[type="submit"]{
+    background-color:#61436d;
+    color:#FFFFFF;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
 }
 
 .content{
@@ -20,15 +64,17 @@ form{
 }
 
 .sidebar{
-    background-color: #808080;
+    background-image:url(./img/starrysky.jpg);
+    background-size: cover;
     color: #FFFFFF;
     width: 40vw;
+    height:100vh;
 }
 
 
 .header, .submit_section{
     background-color: #808080;
-    padding: 0rem 2rem;
+    margin: 2rem 1.5rem;
 }
 
 .sidebar_overlay{
@@ -44,7 +90,6 @@ form{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: start;
     background-color: #808080;
     color: #FFFFFF;
 }
@@ -55,10 +100,6 @@ form{
     font-size: .65rem;
     justify-content: center;
     opacity: 50%;
-    background-color: #000000;
+    width: 40%;
     color:#FFFFFF;
-    padding: 2rem 1rem;
-}
-.sidebar_overlay{
-
 }
