@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
+:root{
+    --color: #cc0000;
+    --txt:#FFFFFF;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -46,8 +51,8 @@ h1{
 }
 
 button[type="submit"]{
-    background-color:#61436d;
-    color:#FFFFFF;
+    background-color:#D3C2CF;
+    color:#61436d;
     padding: .5rem .8rem;
     border-radius: 5px;
     border:none;
@@ -55,6 +60,24 @@ button[type="submit"]{
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     font-size: 1.3rem;
     margin-bottom: .5rem;
+}
+
+input{
+    margin: .2rem .2rem;
+    padding: .1rem .1rem;
+    border: 3px solid #61436d;
+    outline: none;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+input:focus{
+    border: 3px solid var(--color);
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-.1rem);
 }
 
 .content{
@@ -73,7 +96,6 @@ button[type="submit"]{
 
 
 .header, .submit_section{
-    background-color: #808080;
     margin: 2rem 1.5rem;
 }
 
@@ -90,8 +112,8 @@ button[type="submit"]{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    background-color: #808080;
-    color: #FFFFFF;
+    background-color:#61436d;
+    color: #D3C2CF;
 }
 
 .input{
