@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" />
+    <script src="scripts.js" defer></script>
     <title>Sign-up Form</title>
 </head>
+
 <body>
    <div class="content">
         <div class="sidebar">
@@ -18,46 +20,66 @@
                 <p>Some text that is long enough to be a paragraph. This should describe what is going on here.</p>
             </div>
 
-            <div class="form_section left">
-                <h1 class="form_header">Let's do this!</h1>
+            <div class="form_section">
+                <h1 class="form_header left">Let's do this!</h1>
 
-                <form>
+                <form class="left">
                     <div class="input">  
-                        <label for="first_name">FIRST NAME</label>
-                        <input type="text" name="first_name" id="first_name">
+                        <div class="labels">
+                            <label for="first_name">FIRST NAME*</label>
+                            <span class="error"></span>
+                        </div>
+                        <input type="text" name="first_name" id="first_name" required>
                     </div>
 
                     <div class="input">
-                        <label for="last_name">LAST NAME</label>
-                        <input type="text" name="last_name" id="last_name">  
+                        <div class="labels">
+                            <label for="last_name">LAST NAME*</label>
+                            <span class="error">REQUIRED</span>
+                         </div> 
+                         <input type="text" name="last_name" id="last_name" required> 
                     </div>
 
                     <div class="input">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <div class="labels">
+                            <label for="email">EMAIL*</label>
+                            <span class="error">EX:example@xyz.com</span>
+                        </div>
+                        <input type="email" name="email" id="email" required>
                     </div>
 
 
                     <div class="input">
-                        <label for="phone_num">PHONE NUMBER</label>
-                        <input type="tel" name="phone_num" id="phone_num">
+                        <div class="labels">
+                            <label for="phone_num">PHONE NUMBER*</label>
+                            <span class="error">EX:8881234567</span>
+                        </div>
+                        <input type="tel" name="phone_num" id="phone_num" required>
                     </div>
 
                     <div class="input">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <div class="labels">
+                            <label for="password">PASSWORD*</label>
+                            <span class="error">Enter 8 characters, including 1 capital and number</span>
+                        </div>
+                        <input type="password" name="password" id="password" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$">
                     </div>
 
                     <div class="input">
-                        <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm_password" id="confirm_password">
+                        <div class="labels">
+                            <label for="confirm_password">CONFIRM PASSWORD*</label>
+                            <span class="error">Passwords do not match</span>
+                        </div>                    
+                        <input type="password" name="confirm_password" id="confirm_password" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$">
                     </div>
                 </form>
-            </div>
-
-            <div class="submit_section">
-                <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="#">Log In</a></p>
+                <div class="submit_section left">
+                    <button type="submit">Create Account</button>
+                    <div class ="log_in">
+                        <p>Already have an account?</p> 
+                        <a href="#">Log In</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

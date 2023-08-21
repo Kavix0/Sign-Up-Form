@@ -20,46 +20,55 @@
     background-color:rgba(0, 0, 0, 0.5);
 }
 
+
+.submit_section{
+    padding: 1.5rem 0rem;
+    border-top: 3px solid #61463d;
+    width: 100%;
+}
+
+.log_in{
+    display: flex;
+    gap: .5rem;
+}
+
 .left{
     padding-left:2rem;
+}
+
+.header{
+    margin: 2rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
 }
 
 form{
     display: flex;
     flex-flow: row wrap;
-    width: 60vw;
     gap: 1rem;
     margin: 1.5rem 0rem;
 }
 
 label{
-    position: relative;
     margin-bottom: .5rem;
     user-select: none;
-}
-
-p.submit_section{
-    font-size: .5rem;
-}
-
-p.header{
-    font-size: 1.8rem;
-}
-
-h1{
-    font-size: 1.8rem;
 }
 
 button[type="submit"]{
     background-color:#D3C2CF;
     color:#61436d;
-    padding: .5rem .8rem;
+    padding: .5rem .5rem;
     border-radius: 5px;
     border:none;
     outline:none;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     font-size: 1.3rem;
-    margin-bottom: .5rem;
+    margin: .5rem 0rem;
 }
 
 input{
@@ -68,16 +77,31 @@ input{
     border: 3px solid #61436d;
     outline: none;
     cursor: pointer;
-    width: 70%;
+    width: 100%;
     border-radius: 2rem;
     text-align: center;
     font-size: 1.3rem;
+    align-self: center;
 }
 
 input:focus{
     border: 3px solid var(--color);
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
     transform: translateY(-.1rem);
+}
+
+input:valid{
+    border: 3px solid #50C878;
+}
+
+.error{
+    color : var(--color);
+    text-align: right;
+    font-size: .65rem;
+}
+
+.hide{
+    visibility: hidden;
 }
 
 .content{
@@ -92,11 +116,6 @@ input:focus{
     color: #FFFFFF;
     width: 40vw;
     height:100vh;
-}
-
-
-.header, .submit_section{
-    margin: 2rem 1.5rem;
 }
 
 .sidebar_overlay{
@@ -120,7 +139,6 @@ input:focus{
     display: flex;
     flex-flow: column wrap;
     font-size: .65rem;
-    justify-content: center;
     opacity: 50%;
     width: 40%;
     color:#FFFFFF;
