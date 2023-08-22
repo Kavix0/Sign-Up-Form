@@ -23,7 +23,7 @@
             <div class="form_section">
                 <h1 class="form_header left">Let's do this!</h1>
 
-                <form class="left">
+                <form class="left" id="my_form" action="#">
                     <div class="input">  
                         <div class="labels">
                             <label for="first_name">FIRST NAME*</label>
@@ -35,7 +35,7 @@
                     <div class="input">
                         <div class="labels">
                             <label for="last_name">LAST NAME*</label>
-                            <span class="error">REQUIRED</span>
+                            <span class="error"></span>
                          </div> 
                          <input type="text" name="last_name" id="last_name" required> 
                     </div>
@@ -43,7 +43,7 @@
                     <div class="input">
                         <div class="labels">
                             <label for="email">EMAIL*</label>
-                            <span class="error">EX:example@xyz.com</span>
+                            <span class="error"></span>
                         </div>
                         <input type="email" name="email" id="email" required>
                     </div>
@@ -52,15 +52,15 @@
                     <div class="input">
                         <div class="labels">
                             <label for="phone_num">PHONE NUMBER*</label>
-                            <span class="error">EX:8881234567</span>
+                            <span class="error"></span>
                         </div>
-                        <input type="tel" name="phone_num" id="phone_num" required>
+                        <input type="tel" name="phone_num" id="phone_num" minlength="9" maxlength="9" required>
                     </div>
 
                     <div class="input">
                         <div class="labels">
                             <label for="password">PASSWORD*</label>
-                            <span class="error">Enter 8 characters, including 1 capital and number</span>
+                            <span class="error"></span>
                         </div>
                         <input type="password" name="password" id="password" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$">
                     </div>
@@ -68,13 +68,14 @@
                     <div class="input">
                         <div class="labels">
                             <label for="confirm_password">CONFIRM PASSWORD*</label>
-                            <span class="error">Passwords do not match</span>
+                            <span class="error"></span>
                         </div>                    
                         <input type="password" name="confirm_password" id="confirm_password" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$">
                     </div>
                 </form>
+                
                 <div class="submit_section left">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" form="my_form">Create Account</button>
                     <div class ="log_in">
                         <p>Already have an account?</p> 
                         <a href="#">Log In</a>
